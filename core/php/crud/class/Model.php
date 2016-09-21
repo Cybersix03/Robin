@@ -1,6 +1,6 @@
 <?php // models/Users.php
 
-require_once "./config/Database.php";
+require_once "Database.php";
 
 class Model extends Database
 {

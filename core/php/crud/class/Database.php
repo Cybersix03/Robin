@@ -1,5 +1,4 @@
-<?php // config/Database.php
-
+<?php
 class Database
 {
     private $pdo = null;
@@ -8,7 +7,7 @@ class Database
     {
         $this->db_name = "Robin";
         $this->db_user = "root";
-        $this->db_pass = "toor";
+        $this->db_pass = "root";
         $this->db_host = "localhost";
         $this->db_port = 8889 ;
     }
@@ -20,7 +19,7 @@ class Database
 
             try {
                 // DSN
-                $pdo = new PDO("mysql:dbname=" . $this->db_name . ";host=" . $this->db_host . ";port=". $this->db_port, $this->db_user, $this->db_pass);
+                $pdo = new PDO("mysql:dbname=" . DB_NAME . ";host=" . DB_HOST . ";port=". DB_PORT, DB_USER, DB_PASS);
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $pdo->exec("SET CHARACTER SET utf8");
 
